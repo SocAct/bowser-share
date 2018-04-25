@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/tape/bin/tape ./test.js",
-    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/tape/bin/tape ./test.js && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
+    "coverage": "istanbul cover ./node_modules/tape/bin/tape ./test.js && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "jshint": "jshint -c .jshintrc --exclude-path .gitignore ."
   },
@@ -32,5 +32,6 @@
     "jshint": "^2.9.5",
     "pre-commit": "^1.2.2",
     "tape": "^4.9.0"
-  }
+  },
+  "dependencies": {}
 }
